@@ -5,10 +5,10 @@ Ruby based Google+ images (from events and photo-albums) parser based on watir-w
 
 Instructions
 ===============
-1. Install Ruby 1.9.3;
-2. gem install watir-webdriver;
-3. gem install open-uri;
-4. Add URL of photo albums and event albums to files albums.txt and events.txt in the format 'https://plus.google.com/events/string' (for events albums) or in the format 'https://plus.google.com/photos/string/albums/string' (for photo albums) 
+1. Install Ruby 1.9.3
+2. gem update --system
+3. gem install watir-webdriver
+4. Add URL of photo albums and event albums to files albums.txt and events.txt in the format 'https://plus.google.com/events/string' (for events albums) or in the format 'https://plus.google.com/photos/string/albums/string' (for photo albums)
 5. run "ruby gplus_img_saver.rb"
 
 It will create a separate folder for each album and save all images, in the format Author/Album/timestamp_n.jpg
