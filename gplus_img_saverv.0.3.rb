@@ -49,6 +49,7 @@ if @urls_events_array != 0 then @urls_events_array.each do |url|
 	@b.goto url 
 	@album = @b.div(:class, "Iba").text.to_s.gsub(/\\|\/|\*|\]|\[|\)|\(|.\?|.>|.<|\||\"|\'|\,|\:|:|\n|\+/,"")
 	@b.div(:class, "uZa PKb").click
+	sleep 2
 	@author = @b.a(:class, "Sg Ob FdhYye").text.gsub(/\\|\/|\*|\]|\[|\)|\(|.\?|.>|.<|\||\"|\'|\,|\:|:|\n|\+/,"")
 	@x = @b.imgs(:class, "ev aG").each.count.to_i
 	@y = @b.imgs(:class, "m-la-Kb-Z").each.count.to_i
@@ -62,7 +63,7 @@ if @urls_events_array != 0 then @urls_events_array.each do |url|
 		else p "Event albums have no photos ... Here be dragons.. :)"
 		end
 	@img = Array.new
-	@dir = "#{@author}/#{@album}/"
+  @dir = "images/"+@author+"/"+@album
 	FileUtils::mkdir_p(@dir)
 	write_images
 	end
@@ -75,7 +76,7 @@ if @urls_albums_array.count != 0 then @urls_albums_array.each do |url|
 	@author = @b.div(:class, "og c-b c-b-T a-f-e Nwa yka").text.split(" ")[2,3].to_s.gsub(/\\|\/|\*|\]|\[|\)|\(|.\?|.>|.<|\||\"|\'|\,|\:|:|\n|\+/,"")
 	img_counter("tDMXke", "tDMXke", "photo albums counter")
 	@img = Array.new
-	@dir = "#{@author}/#{@album}/"
+	@dir = "images/"+@author+"/"+@album
 	FileUtils::mkdir_p(@dir)
 	write_images
 	end
