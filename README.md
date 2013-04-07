@@ -1,7 +1,7 @@
 gplus_img_saver
 ===============
 
-Ruby based Google+ images (from events and photo-albums) parser based on watir-webdriver and open-uri frameworks.
+Ruby based Google+ images parser (from events and photo-albums) based on watir-webdriver framework.
 
 Instructions
 ===============
